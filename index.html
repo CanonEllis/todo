@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header id="header">
+        <h2>Click here to add a task</h2>
+    </header>
+
+    <main id="todo-list"></main>
+
+    <footer>
+        <canvas id="hillCanvas"></canvas>
+    </footer>
+
+    <!-- Task Form Popup -->
+    <div id="taskForm" class="form-popup">
+        <form class="form-container">
+            <h2>Add New Task</h2>
+            <label for="taskName">Task Name:</label>
+            <input type="text" id="taskName" placeholder="Enter task name" required>
+
+            <label for="taskDifficulty">Difficulty:</label>
+            <select id="taskDifficulty" required>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="veryHard">Very Hard</option>
+                <option value="extreme">Extreme</option>
+            </select>
+
+            <button type="button" onclick="submitTask()">Add Task</button>
+            <button type="button" onclick="closeTaskForm()">Cancel</button>
+        </form>
+    </div>
+
+    <!-- Include the JavaScript files -->
+    <script src="script.js"></script>
+    <script src="todo.js"></script>
+</body>
+</html>
